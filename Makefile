@@ -46,7 +46,7 @@ $(eval DEP := $(patsubst %.o,%.d,$(OBJ)))
 $(OBJ): $(2)
 	-mkdir -p $(BUILD_DIR)
 	@echo "  CC      $$<"
-	$(CC) -Wall  -c $(INCLUDES)  $(MAKE_DEP)   $$< -o $$@ 
+	$(CC) -fPIC -Wall  -c $(INCLUDES)  $(MAKE_DEP)   $$< -o $$@ 
 endef
 #-ldl
 
